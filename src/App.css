@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+:root {
+  --main-color: #8f1313;
+  --main-color-dark: #6d0505;
+  --main-color-light: #8f6767;
+  --font-white: hsl(60, 6%, 73%);
+  --general-bg: hsl(267, 4%, 57%);
+  --slider-btn-bgcolor: var(--main-color-light);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header sidebar"
+    "canvas sidebar"
+    "slider sidebar";
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  grid-area: header;
+  background: var(--main-color-dark);
+  color: var(--font-white);
+  padding: 5px;
+}
+
+.download-btn {
+  padding: 5px 10px;
+}
+
+.labelOptions {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.txtnumber {
+  padding: 5px;
+  width: 45px;
+}
+
+.txtsource {
+  width: 255px;
+  padding: 5px;
+}
+
+.canvas-container {
+  grid-area: canvas;
+  background: var(--general-bg);
+  height: 100%;
+  overflow: auto;
+}
+
+.canvas {
+  background: rgb(60, 38, 121);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: var(--main-color-dark);
+  border-left: 1px solid var(--font-white);
+}
+
+.sidebar-item {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--main-color-light);
+  color: var(--btn-txtcolor);
+  padding: 10px;
+  position: relative;
+  transition: background-color 150ms;
+}
+
+.sidebar-item.active {
+  background-color: var(--btn-bgcolor-active);
+  color: var(--font-white);
+}
+
+.slider-container {
+  grid-area: slider;
+  background: var(--main-color-dark);
+  color: var(--font-white);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: nowrap;
 }
 
-.App-link {
-  color: #61dafb;
+.slider-bar {
+  width: 100%;
+  accent-color: var(--main-color-light);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.value-slider {
+  padding: 10px;
 }
+
+.reset-btn {
+  margin: 5px 5px;
+  padding: 10px 15px;
+  background: var(--main-color-dark);
+  color: var(--font-white);
+  border: 2px solid var(--font-white);
+  border-radius: 5px;
+}
+
