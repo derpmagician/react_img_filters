@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react_img_filters/static/css/main.b5cf5268.css",
+    "main.js": "/react_img_filters/static/js/main.590f655c.js",
+    "index.html": "/react_img_filters/index.html",
+    "main.b5cf5268.css.map": "/react_img_filters/static/css/main.b5cf5268.css.map",
+    "main.590f655c.js.map": "/react_img_filters/static/js/main.590f655c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5cf5268.css",
+    "static/js/main.590f655c.js"
+  ]
+}
