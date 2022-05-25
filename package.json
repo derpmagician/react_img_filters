@@ -1,5 +1,6 @@
 {
   "name": "mascanvas",
+  "homepage": "https://derpmagician.github.io/react_img_filters",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
